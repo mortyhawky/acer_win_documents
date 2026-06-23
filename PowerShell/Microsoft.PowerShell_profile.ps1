@@ -67,7 +67,7 @@ function Invoke-Fastfetch {
         fastfetch.exe
 }
 
-Set-Alias -Name b	  -Value Invoke-Bat
+Set-Alias -Name b         -Value Invoke-Bat
 Set-Alias -Name b         -Value bat
 Set-Alias -Name c         -Value Invoke-CdEza
 Set-Alias -Name ea        -Value Edit-Alacritty
