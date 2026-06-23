@@ -1,10 +1,13 @@
-### Documents
+### $Env:USERPROFILE\Documents
 
 ```ps1
-C:\Users\morty\Documents
-$HOME\Documents
-$Env:USERPROFILE
-%USERPROFILE%
+cd C:\Users\morty\Documents
+cd $HOME\Documents
+cd $Env:USERPROFILE\Documents
+```
+```cmd
+echo %USERPROFILE%
+cd %USERPROFILE%
 ```
 
 ```ps1
