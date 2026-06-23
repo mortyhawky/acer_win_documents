@@ -1,10 +1,12 @@
 ### $Env:USERPROFILE\Documents
 
+pwsh
 ```ps1
 cd C:\Users\morty\Documents
 cd $HOME\Documents
 cd $Env:USERPROFILE\Documents
 ```
+cmd
 ```cmd
 echo %USERPROFILE%
 cd %USERPROFILE%
