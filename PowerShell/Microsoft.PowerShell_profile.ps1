@@ -34,16 +34,13 @@ function Invoke-Bat {
 }
 
 function Invoke-Eza {
-  eza.exe                            `
-  --almost-all                       `
-  --git                              `
-  --group-directories-first          `
-  --icons=auto                       `
-  --ignore-glob="ntuser.*|NTUSER.*"  `
-  @args
-  #--long
-  #--no-quotes
-  #--dereference
+  eza.exe                 `
+   --almost-all            `
+   --git                    `
+   --group-directories-first `
+   --icons=auto               `
+   --ignore-glob "ntuser.*|NTUSER.*|.desktop.ini"  `
+    @args
 
   Git-Remote
   Git-Status
