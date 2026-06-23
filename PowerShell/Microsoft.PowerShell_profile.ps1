@@ -39,7 +39,7 @@ function Invoke-Eza {
    --git                    `
    --group-directories-first `
    --icons=auto               `
-   --ignore-glob "ntuser.*|NTUSER.*|.desktop.ini"  `
+   --ignore-glob "ntuser.*|NTUSER.*|desktop.ini"  `
     @args
 
   Git-Remote
