@@ -50,7 +50,7 @@ function Invoke-Eza {
   Git-Status
 }
 function Invoke-EzaLong {
-    Invoke-Eza --long
+    Invoke-Eza --long @args
 }
 
 function Invoke-CdEza {
