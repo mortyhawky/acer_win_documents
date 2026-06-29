@@ -1,20 +1,24 @@
 clear
-Set-PSReadLineOption -EditMode        Vi
+Set-PSReadLineOption -EditMode Vi
+Set-PSReadLineOption -BellStyle None
+Set-PSReadLineOption -HistoryNoDuplicates
 Set-PSReadLineOption -ViModeIndicator Cursor
-Set-PSReadLineOption -BellStyle       None
 
 $Env:XDG_CONFIG_HOME      = "$HOME\.config"
 $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 
-Write-Host $PSVersionTable.PSVersion
-Write-Host "`$HOME                     = $HOME"
-Write-HOST "`$Env:APPDATA              = $Env:APPDATA"
-Write-HOST "`$Env:LOCALAPPDATA         = $Env:LOCALAPPDATA"
+$PSVersion=$PSVersionTable.PSVersion
+Write-Host "pwsh version              = $PSVersion"
 Write-HOST "`$Env:USERNAME             = $Env:USERNAME"
+Write-HOST "`$Env:TERM                 = $Env:TERM"
+#Write-Host "`$HOME                     = $HOME"
 Write-HOST "`$Env:USERPROFILE          = $Env:USERPROFILE"
 Write-HOST "`$Env:XDG_CONFIG_HOME      = $Env:XDG_CONFIG_HOME"
+Write-HOST "`$Env:LOCALAPPDATA         = $Env:LOCALAPPDATA"
+Write-HOST "`$Env:APPDATA              = $Env:APPDATA"
 Write-HOST "`$Env:KOMOREBI_CONFIG_HOME = $Env:KOMOREBI_CONFIG_HOME"
-Write-HOST "`$Env:TERM                 = $Env:TERM"
+$Processes = $(Get-Process).Count
+Write-Host "Processes                 = $Processes"
 
 function Edit-Profile {
 	nvim.exe $PROFILE
@@ -55,7 +59,7 @@ function Invoke-CdEza {
 }
 
 function Edit-Alacritty {
-    nvim "$Env:APPDATA\alacritty\alacritty.toml"
+    nvim "$Env:APPDATA\alacritty\alacritty.toml" "$Env:APPDATA\alacritty\keybindings.toml"
 }
 
 function Update-Scoop {
